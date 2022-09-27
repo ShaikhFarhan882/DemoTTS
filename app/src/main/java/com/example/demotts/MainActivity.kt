@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     }
 
    private fun generateRandomNumber(){
-        number1 = (0..9).random()
+        number1 = (0..10).random()
         number2 = (0..10).random()
 
         var expression = "$number1 * $number2"
@@ -78,6 +78,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         tts.speak(expression, TextToSpeech.QUEUE_FLUSH, null, "")
 
         answer = number1 * number2
+        Log.d("Answer",answer.toString())
 
         // Calling method after 1.5 seconds
         Handler().postDelayed({
