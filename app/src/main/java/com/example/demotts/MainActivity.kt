@@ -68,8 +68,9 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     }
 
    private fun generateRandomNumber(){
-        number1 = (0..10).random()
-        number2 = (0..10).random()
+        number1 = (1..10).random()
+        number2 = (1..10).random()
+
 
         var expression = "$number1 * $number2"
 
@@ -83,7 +84,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         // Calling method after 1.5 seconds
         Handler().postDelayed({
             speakUp()
-        }, 1300)
+        }, 1500)
 
     }
 
